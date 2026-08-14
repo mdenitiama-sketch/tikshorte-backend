@@ -40,7 +40,7 @@ async function waitForTask(taskId) {
  * @param {string} ratio
  */
 async function generateStartFrame(promptText, ratio = '1080:1920') {
-  const model = genAI.getGenerativeModel({ model: 'gemini-3.1-flash-image' });
+  const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash-image' });
 
   const result = await model.generateContent({
     contents: [{
