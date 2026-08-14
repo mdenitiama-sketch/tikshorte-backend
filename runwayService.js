@@ -2,7 +2,7 @@
 // Encapsule tous les appels à l'API Runway pour TikShorte.
 // Pipeline : texte -> image de départ (textToImage) -> vidéo animée (imageToVideo)
 
-const RunwayML = require('@runwayml/sdk').default;
+const RunwayML = (require('@runwayml/sdk').default || require('@runwayml/sdk'));
 
 const client = new RunwayML({
   apiKey: process.env.RUNWAYML_API_SECRET, // jamais en dur, toujours en variable d'env
