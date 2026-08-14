@@ -7,6 +7,8 @@ const RunwayML = (require('@runwayml/sdk').default || require('@runwayml/sdk'));
 const client = new RunwayML({
   apiKey: process.env.RUNWAYML_API_SECRET, // jamais en dur, toujours en variable d'env
 });
+console.log('DEBUG RunwayML export:', RunwayML);
+console.log('DEBUG client:', client);
 
 const POLL_INTERVAL_MS = 4000; // 4s entre chaque vérification du statut de la tâche
 const MAX_POLL_ATTEMPTS = 90; // ~6 minutes max avant timeout
@@ -101,3 +103,6 @@ async function generateVideoFromText(prompt) {
 module.exports = {
   generateVideoFromText,
 };
+
+
+
